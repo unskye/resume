@@ -20,29 +20,13 @@
             </div>
         </div>
         <div class="section row">
-            <h2 class="col">Directions</h2>
-            <div class="section-text col-right"><span class="key">Machine Learning</span> <span class="key">Deep Learning</span> <span class="key">Computer
-                    Vision</span> <span class="key">Semantic Segmentation</span> <span class="key">Medical Image Analysis</span> <span class="key"></span>Computational Pathology</span></div>
-        </div>
-        <div class="section row">
-            <h2 class="col">Skills</h2>
-            <div class="section-text col-right">
-                <span class="key">Python</span>
-                <span class="key">Matlab</span>
-                <span class="key">C++</span>
-                <span class="key">Shell</span>
-                <span class="key">MySQL</span>
-                <span class="key">Photoshop / Lightroom</span>
-            </div>
-        </div>
-        <div class="section row">
             <h2 class="col">Education</h2>
             <div class="section-text col-right">
                 <h3><span class="emph">Master of Engineering</span> in Biomedical Engineering (Electronic Information)</h3>
                 <div>Sichuan University, Collage of Biomedical Engineering</div>
                 <div class="row">
                     <div class="col light">Chengdu, China</div>
-                    <div class="col-right light">Sep 2023 - Jun 2026 (Expected)</div>
+                    <div class="col-right light">Sep 2023 - Jun 2026</div>
                 </div>
             </div>
             <div class="section-text col-right">
@@ -54,6 +38,39 @@
                 </div>
             </div>
         </div>
+        <div class="section row">
+            <h2 class="col">Directions</h2>
+            <div class="section-text col-right"><span class="key">Machine Learning</span> <span class="key">Deep Learning</span> <span class="key">Computer
+                    Vision</span> <span class="key">Semantic Segmentation</span> <span class="key">Image Classification</span> <span class="key">Medical Image Analysis</span> <span class="key"></span>Computational Pathology</span></div>
+        </div>
+        <div class="section row">
+            <h2 class="col">Skills</h2>
+            <div class="section-text col-right">
+                <span class="key">Python</span>
+                <span class="key">Matlab</span>
+                <span class="key">C++</span>
+                <span class="key">Shell</span>
+                <span class="key">MySQL</span>
+                <span class="key">AutoCAD</span>
+                <span class="key">Photoshop / Lightroom</span>
+                <span class="key">Multisim<br></span>
+                <strong>CET6</strong>
+            </div>
+        </div>
+        <div class="section row">
+            <h2 class="col">Courses</h2>
+            <div class="section-text col-right">
+                <span class="key">Biomedical Image Processing</span>
+                <span class="key">Principles and Systems of Medical Imaging</span>
+                <span class="key">Medical Signal Processing</span>
+                <span class="key">Biomedical Sensors and Detection Technologies</span>
+                <span class="key">Analog Electronic Technology Fundamentals</span>
+                <span class="key">Digital Electronic Technology Fundamentals</span>
+                <span class="key">Digital Signal Processing</span>
+                <span class="key">Data Structure and Algorithm Analysis</span>
+            </div>
+        </div>
+
         <div class="section row">
             <h2 class="col">Papers</h2>
             <div class="section-text col-right">
@@ -69,9 +86,10 @@
                 <ul class="desc">
                     <li><strong>Background:</strong> Chronic Kidney Disease (CKD) impacts over 9% of the global population, with its core histological features being glomerulosclerosis and renal interstitial fibrosis—making glomerular pathological changes a key target for CKD treatment. However, expert manual analysis, annotation, and diagnosis of glomeruli in Whole Slide Images (WSIs) are highly time-consuming and labor-intensive, creating an urgent demand for automated, high-precision glomerular segmentation tools. Existing solutions such as CNNs and ViTs fall short in addressing three core challenges of glomerular images: local textural variability, spatial heterogeneity, and multi-scale morphological priors, resulting in a lack of unified and effective automated approaches.</li>
                     <li><strong>Task:</strong> The project aimed to develop a robust automated framework that integrates local feature extraction and global context modeling within a single unified architecture. This framework needed to overcome the limitations of traditional models, achieve high-precision segmentation for complex pathological glomeruli (e.g., fibrotic or morphologically variant glomeruli), and ultimately provide a practical automated tool for renal histopathological analysis.</li>
-                    <li><strong>Methodoloogy:</strong> To achieve the goal, we designed DualSeg, a dual-stage hybrid framework combining CNN and Visual Recurrent Weighted Key-Value (VRWKV) technologies. In the early stage, Wave-Swin blocks (plug-and-play modules) were deployed to enhance multi-directional semantic feature extraction and dynamically adapt to pathological variations, effectively resolving local textural complexity. In the later stage, VRWKV blocks with linear attention mechanisms were used to efficiently model long-range spatial dependencies, reducing the computational overhead of traditional Transformers. Additionally, a lightweight HamDecoder (based on Non-negative Matrix Factorization) was integrated for multi-scale feature fusion and denoising. Extensive experiments were conducted on two datasets (KPIs for mouse glomeruli and HuBMAP for human glomeruli), with quantitative evaluations against 11 state-of-the-art (SOTA) models using metrics like mDSC, HD95, and IoU, alongside ablation studies to validate the effectiveness of each component.</li>            
-                    <li><strong>Result:</strong> DualSeg achieved superior performance and strong effectiveness across multiple datasets, with comparative and ablation experiments confirming its effectiveness and generalization capability—providing a novel solution for clinical practice. On the KPIs dataset, the model attained the highest average mDSC (92.98%) and the lowest variance (0.0016), representing a 2.85% improvement over the best baseline (VRWKV: 90.13%) and demonstrating robustness across different pathology types. For complex pathologies (e.g., 5/6Nx), its mDSC reached 90.07% (a 4.69% improvement over the baseline) and HD95 decreased to 149.61 (a 20.4% reduction), proving its ability to handle challenging cases. On the HuBMAP test set, DualSeg achieved mDSC scores of 89.79% (private) and 83.73% (public), outperforming SOTA models such as SegFormer (88.53%/80.51%) and DA-TransUNet.</li>            
+                    <li><strong>Methodoloogy:</strong> We designed DualSeg, a dual-stage hybrid framework combining CNN and VRWKV. In the early stage, Wave-Swin blocks were deployed to dynamically adapt to pathological variations, effectively resolving local textural complexity. In the later stage, VRWKV blocks with linear attention mechanisms were used to efficiently model long-range spatial dependencies, reducing the computational overhead of traditional Transformers. Additionally, a lightweight HamDecoder was integrated for multi-scale feature fusion and denoising. Extensive experiments were conducted on two datasets (KPIs for mouse glomeruli and HuBMAP for human glomeruli), with quantitative evaluations against 11 SOTA models using metrics like mDSC, HD95, and IoU, alongside ablation studies to validate the effectiveness of each component.</li>            
+                    <li><strong>Result:</strong> DualSeg showed superior performance and strong effectiveness across multiple datasets, with its effectiveness and generalization verified by comparative and ablation experiments—offering a novel solution for clinical practice. On the KPIs dataset, it achieved the highest average mDSC (92.98%) and lowest variance (0.0016), a 2.85% improvement over the best baseline (VRWKV: 90.13%), demonstrating robustness across different pathologies. For complex pathologies (e.g., 5/6Nx), its mDSC reached 90.07% (4.69% above baseline) and HD95 dropped to 149.61 (20.4% reduction), proving capability in handling challenging cases. On the HuBMAP test set, DualSeg attained mDSC scores of 89.79% (private) and 83.73% (public), outperforming SOTA models like SegFormer (88.53%/80.51%) and DA-TransUNet.</li>            
             </div>
+
             <div style="page-break-after: always;"></div>
             <div class="section-text col-right">
                 <div class="row">
@@ -87,7 +105,7 @@
                     <li><strong>Background:</strong> Colorectal cancer is a common malignant tumor in China, and its diagnosis and prognosis rely heavily on pathological image analysis. However, traditional pathological analysis mainly depends on pathologists’ manual observation, which is not only inefficient but also easily affected by subjective factors—leading to potential inconsistencies in results. Although machine learning and deep learning technologies have been applied to this field to address these issues, a key challenge remains: existing solutions fail to fully leverage image features from different color spaces, which limits further improvements in the accuracy of colorectal cancer pathological image recognition.
                     <li><strong>Task:</strong> This study set out to address the aforementioned challenge by first comparing the performance of three key color spaces (RGB, HSV, LAB*). On this basis, it aimed to combine traditional feature extraction methods (such as 3D Gray Level Co-occurrence Matrix) with deep learning models (ResNet, EfficientNet). The ultimate goal was to construct a classification framework that integrates multi-color spaces and multi-modal features, thereby enhancing the recognition performance of machine learning in colorectal cancer pathological image analysis.
                     <li><strong>Methodoloogy:</strong> To achieve the research task, we implemented three core actions. First, it researched and deployed classic traditional feature extraction algorithms—including 3D Gray Level Co-occurrence Matrix (3D GLCM), Local Binary Patterns (LBP), and Wavelet Packet Transform—to extract texture features from pathological images. Second, it learned and built mainstream deep learning models (ResNet, EfficientNet), utilizing their strong adaptive feature learning capabilities to extract deep-level image features that are difficult to capture with traditional methods. Third, we designed and implemented a classification framework that integrates multi-color spaces and multi-modal features, effectively fusing the extracted traditional features and deep features. Additionally, we conducted comparative analysis to evaluate performance differences between different color spaces, different feature extraction methods, and the proposed fusion framework in the colorectal cancer pathological image recognition task.
-                    <li><strong>Result:</strong> The research achieved notable outcomes in colorectal cancer pathological image recognition. First, the proposed classification framework—integrating multi-color spaces and multi-modal features—delivered significant performance improvements, with the highest classification accuracy reaching 98.60%. Compared with solutions relying on a single color space or a single feature extraction method, this framework effectively enhanced the ability to recognize colorectal cancer pathological images, addressing the limitations of traditional single-modal approaches. Second, by reasonably exploiting the advantages of different color spaces (RGB, HSV, LAB*) and complementary feature extraction methods (traditional + deep learning), the team successfully constructed an efficient and accurate classification scheme for colorectal cancer pathological images. This scheme provides strong technical support for the early diagnosis and subsequent treatment of colorectal cancer, laying a foundation for more standardized and automated pathological analysis.
+                    <li><strong>Result:</strong> This research yielded notable outcomes in colorectal cancer pathological image recognition. First, the proposed classification framework—integrating multi-color spaces and multi-modal features—achieved significant performance improvements, with the highest classification accuracy reaching 98.60%. Compared to solutions relying on a single color space or feature extraction method, it effectively boosted recognition ability and addressed the limitations of traditional single-modal approaches. Second, by leveraging the advantages of specific color spaces (RGB, HSV, LAB*) and complementary feature extraction methods (traditional + deep learning), the team built an efficient, accurate classification scheme for such images. This scheme offers strong technical support for colorectal cancer’s early diagnosis and subsequent treatment, laying a foundation for more standardized, automated pathological analysis.
             </div>
         </div>
         <div class="section row">
@@ -95,41 +113,42 @@
             <div class="section-text col-right">
                 <div class="row">
                     <div class="col">
-                        <h3>Traditional Chinese Medicine Tongue Diagnosis Device Project</h3>
-                    </div>
-                </div>
-                <div class="row subsection">
-                    <div class="emph col">Used CNN for tongue segmentation in tongue images</div>
-                    <!-- <div class="col-right light">Fall 2007</div> -->
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h3>Oral CBCT Project</h3> 
-                    </div>
-                </div>
-                <div class="row subsection">
-                    <div class="emph col">Used models like Segment Anything Model (SAM) for segmentation of individual tooth bodies</div>
-                    <!-- <div class="col-right light">Fall 2007</div> -->
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h3>Kaggle Competition SenNet+HOA</h3> 
+                        <h3>&diams; Kaggle Competition SenNet+HOA</h3> 
                     </div>
                 </div>
                 <div class="row subsection">
                     <div class="emph col">Primarily responsible for model parameter fine-tuning and testing</div>
                     <div class="col-right light">Jan 2024</div>
                 </div>
-                <div class="col">
-                    <h3> “Challenge Cup”: Newborn Abdominal Blood Oxygen Saturation Detection System</h3>
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Traditional Chinese Medicine Tongue Diagnosis Device Project</h3>
+                    </div>
                 </div>
-                <div class="emph col">Team Leader</div>
-                <div class="col-right light">Apr 2022</div>
-                <div class="col">
-                    <h3> “Internet Plus”: Schizophrenia Voice Analysis Evaluation and Auxiliary Treatment Platform</h3>
+                <div class="row subsection">
+                    <div class="emph col">Used CNN for tongue segmentation in tongue images</div>
+                    <div class="col-right light">Oct 2023</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Oral CBCT Project</h3> 
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">Used models like Segment Anything Model (SAM) for segmentation of individual tooth bodies</div>
+                    <div class="col-right light">Jun 2023</div>
+                </div>
+            <div class="col">
+                    <h3>&diams; “Internet Plus”: Schizophrenia Voice Analysis Evaluation and Auxiliary Treatment Platform</h3>
                 </div>
                 <div class="emph col">Team Leader</div>
                 <div class="col-right light">May 2022</div>
+                <div class="col">
+                    <h3>&diams; “Challenge Cup”: Newborn Abdominal Blood Oxygen Saturation Detection System</h3>
+                </div>
+                <div class="emph col">Team Leader</div>
+                <div class="col-right light">Apr 2022</div>
+                
 
                 <!-- <div class="desc">Organized by the Computer Society of India, was part of a team of three to represent
                     our region at
@@ -144,6 +163,27 @@
                         <div class="section-text col-right">
                 <div class="row">
                     <div class="col">
+                        <h3>Miccai2024 Kidney Pathology Image segment (KPIs) Challenge</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="emph col">Team Leader / 23rd</div>
+                    <div class="col-right light">Aug 2024</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Outstanding Secretary / Director of the New Media Department of the Graduate Student Union</h3>
+                    </div>
+                    <div class="col-right light">Jun 2024 - Jun 2025</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Second class scholarship of the school</h3>
+                    </div>
+                    <div class="col-right light">Sep 2023</div>
+                </div>
+                <div class="row">
+                    <div class="col">
                         <h3>The 3rd Sichuan Provincial Biomedical Engineering Innovation Design Competition</h3>
                     </div>
                 </div>
@@ -153,15 +193,7 @@
                     <div class="col-right light">Jun 2023</div>
                 </div>
                 
-                <div class="row">
-                    <div class="col">
-                        <h3>Miccai2024 Kidney Pathology Image segment (KPIs) Challenge</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="emph col">Team Leader / 23rd</div>
-                    <div class="col-right light">Aug 2024</div>
-                </div>
+                
             </div>
         </div>
 </body>
