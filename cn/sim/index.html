@@ -11,23 +11,27 @@
 <body>
     <div class="page">
         <div class="page" style="position: relative;"> <!-- 新增相对定位容器 -->
-        <div class="section row">
-            <!-- 调整图片样式，使用绝对定位 -->
-            <img src="../pic.jpg"  
-                 width="128" 
-                 height="128" 
-                 alt="ID Pic"
-                 style="position: absolute; top:0px; left: 240px; /* 调整此值控制垂直位置 */">
-
-            <!-- <h1 class="col"><span style="font-weight:700">张彦</span> </h1> -->
-            <h1 class="col"><span style="font-weight:700;">张彦</span></h1>
-            <div class="contact-info col-right">
-                <div>26届硕士毕业生</div>
-                <div><a href="tel:+8618788936120">1878896120</a></div>
-                <div><a href="mailto:bclay@qq.com">bclay@qq.com</a></div>
-                <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
+            <div class="section row" style="display: flex; align-items: center; width: 100%;">
+                <!-- 名字保持原位置 -->
+                <h1 class="col"><span style="font-weight:700;">张彦</span></h1>
+                
+                <!-- 个人介绍 + 照片 整体推到最右 -->
+                <div style="display: flex; align-items: center; margin-left: auto;">
+                    <div class="contact-info" style="text-align: right; margin-right: 20px;">
+                        <div>26届硕士毕业生</div>
+                        <div><a href="tel:+8618788936120">1878896120</a></div>
+                        <div><a href="mailto:bclay@qq.com">bclay@qq.com</a></div>
+                        <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
+                    </div>
+                    
+                    <img src="../pic.jpg"  
+                        width="90" 
+                        height="90" 
+                        alt="张彦的个人照片"
+                        style="margin: 0;"
+                        >
+                </div>
             </div>
-        </div>
         
         <div class="section row">
             <h2 class="col">教育经历</h2>
