@@ -76,6 +76,12 @@ a:hover {
          line-height:28px;
          font-family: 'Source Sans Pro', sans-serif;
          text-transform:uppercase;
+
+.diamond {
+  color: purple; /* 填充颜色 */
+  font-size: 28px; /* 符号大小 */
+}
+
 }
 ul{
   padding-left:15px;

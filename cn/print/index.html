@@ -10,15 +10,19 @@
 
 <body>
     <div class="page">
-        <div class="page" style="position: relative;"> <!-- 新增相对定位容器 -->
+            <div class="page" style="position: relative;"> <!-- 新增相对定位容器 -->
         <div class="section row">
             <!-- 调整图片样式，使用绝对定位 -->
-            <img src="pic.jpg"  
+            <!-- <img src="pic.jpg"  
                  width="128" 
                  height="128" 
                  alt="ID Pic"
-                 style="position: absolute; top:0px; left: 240px; /* 调整此值控制垂直位置 */">
-
+                 style="position: absolute; top:0px; left: 240px; /* 调整此值控制垂直位置 */"> -->
+            <img src="pic.jpg"  
+                 width="100" 
+                 height="100" 
+                 alt="ID Pic"
+                 style="position: absolute;top:-13px; left: 184px;">     
             <!-- <h1 class="col"><span style="font-weight:700">张彦</span> </h1> -->
             <h1 class="col"><span style="font-weight:700;">张彦</span></h1>
             <div class="contact-info col-right">
@@ -29,7 +33,7 @@
             </div>
         </div>
 
-        <div class="section row">
+         <div class="section row">
             <h2 class="col">教育经历</h2>
             <div class="section-text col-right">
                 <h3>生物医学工程（电子信息）<span class="emph">工学硕士</span></h3>
@@ -48,7 +52,7 @@
                 </div>
             </div>
         </div>
-                <div class="section row">
+        <div class="section row">
             <h2 class="col">研究方向</h2>
             <div class="section-text col-right"><span class="key">机器学习</span> <span class="key">深度学习</span> <span class="key">计算机视觉</span> <span class="key"><strong>语义分割</strong></span> <span class="key">图像分类</span> <span class="key">医学图像分析<br></span> <span class="key">计算病理学</span>
             </div>
@@ -80,45 +84,7 @@
                 <span class="key">数据结构与算法分析</span>
             </div>
         </div>
-        <!-- <div class="section row">
-            <h2 class="col">文章</h2>
-            <div class="section-text col-right">
-                <div class="row">
-                    <div class="col">
-                        <h3>DualSeg: Unified multi-scale framework with dual-stage encoder for glomerular segmentation</h3>
-                    </div>
-                </div>
-                <div class="row subsection">
-                    <div class="emph col">在投</div>
-                    <div class="col-right light">10/2024 至今</div>
-                </div>
-                <ul class="desc">
-                    <li><strong>背景:</strong> 慢性肾脏病（CKD）影响全球 9%以上的人口，其核心组织学特征是肾小球硬化和肾间质纤维化，这使得肾小球病理变化成为 CKD 治疗的关键靶点。然而，全玻片图像 （WSI） 中肾小球的专家手动分析、注释和诊断非常耗时和劳动密集型，迫切需要自动化、高精度的肾小球分割工具。CNN 和 ViT 等现有解决方案无法解决肾小球图像的三个核心挑战：局部纹理变异性、空间异质性和多尺度形态先验，导致缺乏统一有效的自动化方法。</li>  
-                    <li><strong>任务:</strong> 该项目旨在开发一个强大的自动化框架，将局部特征提取和全局上下文建模集成到一个统一的架构中。该框架需要克服传统模型的局限性，实现复杂病理性肾小球（如纤维化或形态变异肾小球）的高精度分割，并最终为肾脏组织病理学分析提供实用的自动化工具。</li>  
-                    <li><strong>方法:</strong> 为了实现这一目标，我们设计了 DualSeg，这是一个结合了 CNN 和视觉循环加权键值 （VRWKV） 技术的双阶段混合框架。前期部署 Wave-Swin 块（即插即用模块），增强多向语义特征提取，动态适应病理变异，有效解决局部纹理复杂性。后期，使用具有线性注意力机制的 VRWKV 块对远程空间依赖关系进行高效建模，减少了传统 Transformer 的计算开销。此外，还集成了轻量级的 HamDecoder（基于非负矩阵分解）用于多尺度特征融合和去噪。对两个数据集（小鼠肾小球的 KPI 和人肾小球的 HuBMAP）进行了广泛的实验，并使用 mDSC、HD95 和 IoU 等指标对 11 个最先进的 （SOTA） 模型进行定量评估，同时进行消融研究以验证每个组件的有效性。</li>  
-                    <li><strong>结果:</strong> DualSeg 在多个数据集中取得了卓越的性能和强大的有效性，比较和消融实验证实了其有效性和泛化能力，为临床实践提供了一种新的解决方案。在 KPI 数据集上，该模型获得了最高的平均 mDSC （92.98%） 和最低的方差 （0.0016），比最佳基线 （VRWKV的90.13%） 提高了 2.85%，并展示了跨不同病理类型的稳健性。对于复杂病理（例如5/6Nx），其 mDSC 达到 90.07%（比基线提高了 4.69%），HD95 下降到 149.61（降低了 20.4%），证明了其处理具有挑战性的病例的能力。在 HuBMAP 测试集上，DualSeg 的 mDSC 得分分别为 89.79%（私有）和 83.73%（公有），优于 SegFormer（88.53%/80.51%）和 DA-TransUNet 等 SOTA 模型。</li>            
-            </div>
-            <div style="page-break-after: always;"></div>
 
-            <div class="section-text col-right"></div>
-
-            <div class="section-text col-right">
-                <div class="row">
-                    <div class="col">
-                        <h3>结直肠癌图像分析</h3>
-                    </div>
-                </div>
-                <div class="row subsection">
-                    <div class="emph col">本科毕业设计</div>
-                    <div class="col-right light">12/2022 - 06/2023</div>
-                </div>
-                <ul class="desc">
-                    <li><strong>背景:</strong> 结直肠癌是我国常见的恶性肿瘤，其诊断和预后在很大程度上依赖于病理影像分析。然而，传统的病理分析主要依赖于病理学家的人工观察，不仅效率低下，而且容易受到主观因素的影响，导致结果可能存在不一致。尽管机器学习和深度学习技术已被应用于该领域来解决这些问题，但仍然存在一个关键挑战：现有解决方案无法充分利用不同色彩空间的图像特征，这限制了结直肠癌病理图像识别准确性的进一步提高。</li>
-                    <li><strong>任务:</strong> 本研究旨在通过首先比较三个关键色彩空间（RGB、HSV、LAB*）的性能来应对上述挑战。在此基础上，将传统的特征提取方法（如三维灰度共现矩阵）与深度学习模型（ResNet、EfficientNet）相结合。最终目标是构建一个融合多色空间和多模态特征的分类框架，从而增强机器学习在结直肠癌病理图像分析中的识别性能。
-                    <li><strong>方法:</strong> 为完成研究任务，我们实施了三项核心行动。首先，研究并部署了经典的传统特征提取算法，包括 3D 灰度共现矩阵（3D GLCM）、局部二进制模式（LBP）和小波包变换，从病理图像中提取纹理特征。其次，学习并构建了主流的深度学习模型（ResNet、EfficientNet），利用其强大的自适应特征学习能力，提取出传统方法难以捕捉的深层图像特征。再次，设计并实现了融合多色空间和多模态特征的分类框架，有效地融合了提取的传统特征和深层特征。此外，我们还进行了比较分析，以评估不同色彩空间、不同特征提取方法和所提出的融合框架在结直肠癌病理图像识别任务中的性能差异。
-                    <li><strong>结果:</strong> 首先，所提出的分类框架——集成了多颜色空间和多模态特征——提供了显着的性能改进，最高分类准确率达到 98.60%。与依赖单一色彩空间或单一特征提取方法的解决方案相比，该框架有效增强了结直肠癌病理图像的识别能力，解决了传统单模态方法的局限性。其次，通过合理利用不同色彩空间（RGB、HSV、LAB*）和互补特征提取方法（传统+深度学习）的优势，团队成功构建了高效、准确的结直肠癌病理图像分类方案。该方案为结直肠癌的早期诊断和后续治疗提供了有力的技术支持，为更加规范化和自动化的病理分析奠定了基础。
-            </div>
-        </div> -->
         <div class="section row">
             <h2 class="col">文章</h2>
             <div class="section-text col-right">
@@ -156,16 +122,15 @@
                 <div class="row">
                     <div class="col">
                         <h3>&diams; Kaggle 竞赛 SenNet+HOA</h3> 
-  
                     </div>
                 </div>
                 <div class="row subsection">
-                    <div class="emph col">主要负责模型参数的微调和测试</div>
+                    <div class="emph col">负责优化策略的对比验证</div>
                     <div class="col-right light">01/2024</div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h3> 中医舌诊仪项目</h3>
+                        <h3>&diams; 中医舌诊仪项目</h3>
                     </div>
                 </div>
                 <div class="row subsection">
@@ -187,7 +152,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="emph col">组长</div>
+                        <div class="emph col">组长 / 负责协调团队合作</div>
                         <div class="col-right light">05/2022</div>
                 </div>
                     <div class="row">
@@ -196,7 +161,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="emph col">组长</div>
+                        <div class="emph col">组长 / 负责协调团队合作与电路板绘制</div>
                         <div class="col-right light">04/2022</div>
                     </div>
 
@@ -220,7 +185,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <h3>&diams; 学生会研究生分会新媒体部门部长</h3>
+                        <h3>&diams; 学生会研究生分会新媒体部门优秀部长</h3>
                     </div>
                     <div class="col-right light">06/2024 - 06/2025</div>
                 </div>
@@ -228,7 +193,7 @@
                     <div class="col">
                         <h3>&diams; 校二等奖学金</h3>
                     </div>
-                    <div class="col-right light">09/2023</div>
+                    <div class="col-right light">2023 - 2024</div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -242,42 +207,7 @@
                 </div>                
             </div>
         </div>
-        <div class="section row">
-            <h2 class="col">兴趣爱好</h2>
-            <div class="section-text col-right">
-                <div class="row">
-                    <div class="col">
-                        <h3>&diams; 跑步</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="emph col">参与校内外活动/比赛若干，最高获校运会3km/5km各第十名</div>
-                    <div class="col-right light">10/2013 至今</div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <h3>&diams; 摄影</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="emph col">偏向胶卷与街头摄影</div>
-                    <div class="col-right light">10/2022 至今</div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <h3>&diams; 羽毛球</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="emph col">院羽毛球赛团体赛冠军</div>
-                    <div class="col-right light">10/2023 至今</div>
-                </div>
-            </div>
         </div>
-    </div>
-</div>
 </body>
 
 </html>

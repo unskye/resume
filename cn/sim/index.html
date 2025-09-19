@@ -10,14 +10,22 @@
 
 <body>
     <div class="page">
+        <div class="page" style="position: relative;"> <!-- 新增相对定位容器 -->
         <div class="section row">
-            <h1 class="col"><span style="font-weight:700">张彦</span> </h1>
+            <!-- 调整图片样式，使用绝对定位 -->
+            <img src="../pic.jpg"  
+                 width="128" 
+                 height="128" 
+                 alt="ID Pic"
+                 style="position: absolute; top:0px; left: 240px; /* 调整此值控制垂直位置 */">
+
+            <!-- <h1 class="col"><span style="font-weight:700">张彦</span> </h1> -->
+            <h1 class="col"><span style="font-weight:700;">张彦</span></h1>
             <div class="contact-info col-right">
                 <div>26届硕士毕业生</div>
                 <div><a href="tel:+8618788936120">1878896120</a></div>
-                <div><a href="mailto:unsayin9@gmail.com">bclay@qq.com</a></div>
-                <!-- <div><a href="http://jugalm.com">nuterian.github.io</a></div> -->
-                 <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
+                <div><a href="mailto:bclay@qq.com">bclay@qq.com</a></div>
+                <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
             </div>
         </div>
         
@@ -28,7 +36,7 @@
                 <div>四川大学 生物医学工程学院</div>
                 <div class="row">
                     <div class="col light">成都，中国</div>
-                    <div class="col-right light">09/2023 - 06/2026 (预期)</div>
+                    <div class="col-right light">09/2023 - 06/2026 </div>
                 </div>
             </div>
             <div class="section-text col-right">
@@ -42,7 +50,7 @@
         </div>
         <div class="section row">
             <h2 class="col">研究方向</h2>
-            <div class="section-text col-right"><span class="key">机器学习</span> <span class="key">深度学习</span> <span class="key">计算机视觉</span> <span class="key">语义分割</span> <span class="key">图像分类</span> <span class="key">医学图像分析<br></span> <span class="key">计算病理学</span>
+            <div class="section-text col-right"><span class="key">机器学习</span> <span class="key">深度学习</span> <span class="key">计算机视觉</span> <span class="key"><strong>语义分割</strong></span> <span class="key">图像分类</span> <span class="key">医学图像分析<br></span> <span class="key">计算病理学</span>
             </div>
             </div>
             <div class="section row">
@@ -86,7 +94,8 @@
                     <div class="col-right light">10/2024 至今</div>
                 </div>
                 <ul class="desc">
-                    <li>慢性肾脏病（CKD）影响全球 9% 以上人口，肾小球病理变化为其治疗关键靶点，但WSI手动分析耗时，CNN、ViT 等难解决局部纹理变异、空间异质性和形态学先验集成三大挑战。项目开发集成局部与全局建模的自动化框架，设计 DualSeg 双阶段框架：前期 Wave-Swin 模块解局部问题，后期 VRWKV 模块建模远程依赖，结合轻量 Decoder 融合多尺度特征，在 KPIs和HuBMAP 数据集对比 11 个 SOTA 模型并展现出最优性能：KPIs 上平均获得92.98%的mDSC，并保持了最强的鲁棒性和泛化性；在HuBMAP的私有 / 公有数据集上获得 89.79%/83.73%的mDSC。</li> 
+                    <li>慢性肾脏病（CKD）影响全球 9% 以上人口，肾小球病理变化为其治疗关键靶点，但WSI手动分析耗时，CNN、ViT 等难解决局部纹理变异、空间异质性和形态学先验集成三大挑战。</li>
+                    <li>本项目开发集成局部与全局建模的自动化框架，设计 DualSeg 双阶段框架：前期 Wave-Swin 模块解局部问题，后期 VRWKV 模块建模远程依赖，结合轻量 Decoder 融合多尺度特征，在 KPIs和HuBMAP 数据集对比 11 个 SOTA 模型并展现出最优性能：KPIs 上平均获得92.98%的mDSC，并保持了最强的鲁棒性和泛化性；在HuBMAP的私有 / 公有数据集上获得 89.79%/83.73%的mDSC。</li>
             </div>
             <!-- <div style="page-break-after: always;"></div> -->
             <div class="section-text col-right">
@@ -100,7 +109,7 @@
                     <div class="col-right light">12/2022 - 06/2023</div>
                 </div>
                 <ul class="desc">
-                    <li>结直肠癌病理分析人工低效且主观，现有技术未充分利用多色空间特征。本研究比较 RGB、HSV、LAB*，结合 3D GLCM 等传统特征与 ResNet 等，构建多色多模态融合框架，准确率达 98.60%，助力早期诊断与自动化分析。</li>
+                    <li>结直肠癌病理分析中依靠人工分析的占比高，存在低效、主观的缺陷，现有技术未充分利用多色空间特征。本研究比较 RGB、HSV、LAB*，结合 3D GLCM 等传统特征与 ResNet 等深度特征，构建多色多特征融合框架，在Kather数据集上分类准确率达 98.60%，助力早期诊断与自动化分析。</li>
                 </div>
         </div>
         <div class="section row">
@@ -112,7 +121,7 @@
                     </div>
                 </div>
                 <div class="row subsection">
-                    <div class="emph col">主要负责模型参数的微调和测试</div>
+                    <div class="emph col">负责优化策略的对比验证</div>
                     <div class="col-right light">01/2024</div>
                 </div>
                 <div class="row">
@@ -139,7 +148,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="emph col">组长</div>
+                        <div class="emph col">组长 / 负责协调团队合作</div>
                         <div class="col-right light">05/2022</div>
                 </div>
                     <div class="row">
@@ -148,7 +157,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="emph col">组长</div>
+                        <div class="emph col">组长 / 负责协调团队合作与电路板绘制</div>
                         <div class="col-right light">04/2022</div>
                     </div>
 
@@ -172,7 +181,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <h3>&diams; 学生会研究生分会新媒体部门优秀干事 / 部长</h3>
+                        <h3>&diams; 学生会研究生分会新媒体部门优秀部长</h3>
                     </div>
                     <div class="col-right light">06/2024 - 06/2025</div>
                 </div>
@@ -180,7 +189,7 @@
                     <div class="col">
                         <h3>&diams; 校二等奖学金</h3>
                     </div>
-                    <div class="col-right light">09/2023</div>
+                    <div class="col-right light">2023 - 2024</div>
                 </div>
                 <div class="row">
                     <div class="col">
