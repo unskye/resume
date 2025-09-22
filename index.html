@@ -18,6 +18,7 @@
                 <div style="display: flex; align-items: center; margin-left: auto;">
                     <div class="contact-info" style="text-align: right; margin-right: 20px;">
                         <div>2026 Graduate</div>
+                        <div><a href="tel:+8613086929147">13086929147</a></div>
                         <div><a href="mailto:unsayin9@gmail.com">unsayin9@gmail.com</a></div>
                         <!-- <div><a href="http://jugalm.com">nuterian.github.io</a></div> -->
                         <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
@@ -78,7 +79,7 @@
             <div class="section-text col-right">
                 <div class="row">
                     <div class="col">
-                        <h3>DualSeg: Unified multi-scale framework with dual-stage encoder for glomerular segmentatio</h3>
+                        <h3>DualSeg: Unified multi-scale framework with dual-stage encoder for glomerular segmentation</h3>
                     </div>
                 </div>
                 <div class="row subsection">
@@ -86,8 +87,9 @@
                     <div class="col-right light">Oct 2024 - Present</div>
                 </div>
                 <ul class="desc">
-                    <li>Chronic kidney disease (CKD) affects over 9% of the global population, and glomerular pathological changes are its key therapeutic targets. However, manual analysis of WSI is time-consuming, and CNN, ViT, and other methods are difficult to solve the three major challenges of local texture discriminability, spatial heterogeneity, and morphological prior integration.</li>
-                    <li>This project has designed a two-stage framework named DualSeg that integrates local and global modeling. In the early stage, the Wave-Swin module is employed to extract local texture, and in the subsequent stage, the VRWKV module is utilized to model long-range dependencies. Meanwhile, it combines with a lightweight Decoder to fuse multi-scale features. With such a design, DualSeg has effectively solved the three key problems mentioned above, and demonstrated the optimal performance when compared with 11 SOTA models on the KPIs and HuBMAP datasets. On the test set of KPIs, it has achieved an average mDSC of 92.98% and obtained the lowest HD95 score in each category. On the public / private datasets of HuBMAP, it has obtained an average mDSC of 83.73% / 89.79%, which effectively proves the robustness of DualSeg.
+                    <li>The key therapeutic targets of Chronic Kidney Disease is glomerular pathological changes. However, manual analysis of WSI is time-consuming, and CNN, ViT, and other mainstream automation frameworks are difficult to solve the three major challenges of local texture discriminability, spatial heterogeneity, and morphological prior integration.</li>
+                    <li>This project designs a dual-stage decoder framework <strong>DualSeg</strong>: the Wave-Swin module is used to solve the problem of local feature modeling, the VRWKV module is employed to achieve long-range dependency capture, and a lightweight decoder is integrated to accomplish multi-scale feature fusion. These three core designs each correspond to one of the three aforementioned challenges.</li>
+                    <li>To verify its performance, DualSeg was compared with 11 SOTA models on the KPIs and HuBMAP datasets, demonstrating the optimal comprehensive performance: on the KPIs test set, it achieves an average mDSC of 92.98% and obtains the lowest HD95 scores in each category; on the private/public subsets of HuBMAP, it reaches an average mDSC of 89.79% and 83.73% respectively. These results fully confirm the robustness of DualSeg and its breakthrough value in overcoming the core challenges of renal pathological segmentation.</li>
 
                     <!-- <li><strong>Background:</strong> Chronic Kidney Disease (CKD) impacts over 9% of the global population, with its core histological features being glomerulosclerosis and renal interstitial fibrosis—making glomerular pathological changes a key target for CKD treatment. However, expert manual analysis, annotation, and diagnosis of glomeruli in Whole Slide Images (WSIs) are highly time-consuming and labor-intensive, creating an urgent demand for automated, high-precision glomerular segmentation tools. Existing solutions such as CNNs and ViTs fall short in addressing three core challenges of glomerular images: local textural variability, spatial heterogeneity, and multi-scale morphological priors, resulting in a lack of unified and effective automated approaches.</li>
                     <li><strong>Task:</strong> The project aimed to develop a robust automated framework that integrates local feature extraction and global context modeling within a single unified architecture. This framework needed to overcome the limitations of traditional models, achieve high-precision segmentation for complex pathological glomeruli (e.g., fibrotic or morphologically variant glomeruli), and ultimately provide a practical automated tool for renal histopathological analysis.</li>

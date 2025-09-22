@@ -18,7 +18,7 @@
     <div style="display: flex; align-items: center; margin-left: auto;">
         <div class="contact-info" style="text-align: right; margin-right: 20px;">
             <div>26届硕士毕业生</div>
-            <div><a href="tel:+8618788936120">18788936120</a></div>
+            <div><a href="tel:+8613086929147">13086929147</a></div>
             <div><a href="mailto:bclay@qq.com">bclay@qq.com</a></div>
             <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
         </div>
@@ -94,12 +94,13 @@
                     </div>
                 </div>
                 <div class="row subsection">
-                    <div class="emph col">在投</div>
+                    <div class="emph col"><strong>第一作者</strong> 在投</div>
                     <div class="col-right light">10/2024 至今</div>
                 </div>
                 <ul class="desc">
-                    <li>慢性肾脏病（CKD）影响全球9%以上人口，肾小球病理变化为其治疗关键靶点，但WSI手动分析耗时，CNN、ViT等难解决局部纹理变异、空间异质性和形态学先验集成三大挑战。</li>
-                    <li>本项目设计了集成局部与全局建模的双阶段框架“DualSeg”：首先采用Wave-Swin模块解局部问题，随后使用VRWKV模块建模远程依赖，并结合轻量化解码器融合多尺度特征。DualSeg在KPIs和HuBMAP数据集对比11个SOTA模型展现出了最优性能：KPIs测试集上平均获得92.98%的mDSC，并在每个类别上获得了最低HD95分数；在HuBMAP的私有/公开数据集上平均获得89.79%/83.73%的mDSC，有效证明了DualSeg的鲁棒性。</li>
+                    <li>肾小球病理变化是慢性肾脏病治疗的关键靶点，但全切片图像手动分析耗时费力，且CNN、ViT等主流自动化框架难以有效解决局部纹理变异、空间异质性及形态学先验集成三大核心挑战。</li>
+                    <li>本项目设计双阶段解码器框架<strong>DualSeg</strong>：通过Wave-Swin模块解决局部特征建模问题，借助VRWKV模块实现远程依赖捕捉，并结合轻量解码器完成多尺度特征融合，三大核心设计分别针对前述三大挑战。</li>
+                    <li>为验证性能，DualSeg在KPIs与HuBMAP数据集上，与11个SOTA模型展开对比并展现出最优的综合表现：在KPIs测试集上，平均mDSC达92.98%，且在每个类别中均取得最低HD95分数；在HuBMAP私有/公开数据集上，平均mDSC分别达到89.79%与83.73%。该结果充分证明了DualSeg的鲁棒性，及其在攻克肾脏病理分割核心挑战上的突破性价值。</li>
             </div>
             <!-- <div style="page-break-after: always;"></div> -->
             <div class="section-text col-right">
