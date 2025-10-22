@@ -45,6 +45,32 @@ a:hover {
   background-color:#38599C;
   color:#fff;
 }
+
+
+.key2:first-child { margin-left: 0 }
+.key2 { margin: 0 10px;
+       position: relative;
+}
+.key2::before { content: '○';
+               position: absolute;
+               left: -15px;
+               color: #555;
+               font-size: 7pt;
+}
+
+.ex:first-child { margin-left: 0 }
+.ex { margin: 0 20px;
+       position: relative;
+}
+.ex::before { content: '▶';
+               position: absolute;
+               left: -20px;
+               color: #555;
+               font-size: 7pt;
+}
+
+
+
 .key:first-child { margin-left: 0 }
 .key { margin: 0 10px;
        position: relative;

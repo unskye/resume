@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yan Zhang - Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Source+Sans+Pro:400,400i"
+        rel="stylesheet">
+
+<body>
+    <div class="page">
+        <div class="section row" style="display: flex; align-items: center; width: 100%;">
+                <!-- 名字保持原位置 -->
+                <h1 class="col"><span style="font-weight:700">Yan</span> Zhang</h1>
+                
+                <!-- 个人介绍 + 照片 整体推到最右 -->
+                <div style="display: flex; align-items: center; margin-left: auto;">
+                    <div class="contact-info" style="text-align: right; margin-right: 20px;">
+                        <div>2026 Graduate</div>
+                        <div><a href="tel:+8613086929147">13086929147</a></div>
+                        <div><a href="mailto:unsayin9@gmail.com">unsayin9@gmail.com</a></div>
+                        <!-- <div><a href="http://jugalm.com">nuterian.github.io</a></div> -->
+                        <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
+                    </div>
+                    
+                    <img src="../pic.jpg"  
+                        width="90" 
+                        height="90" 
+                        alt="张彦的个人照片"
+                        style="margin: 0;"
+                        >
+                </div>
+            </div>
+
+        
+        <div class="section row">
+            <h2 class="col">Education</h2>
+            <div class="section-text col-right">
+                <h3><span class="emph">Master of Engineering</span> in Electronic Information (Biomedical Engineering)</h3>
+                <div>Sichuan University, College of Biomedical Engineering</div>
+                <div class="row">
+                    <div class="col light">Chengdu, China</div>
+                    <div class="col-right light">Sep 2023 - Jun 2026</div>
+                </div>
+            </div>
+            <div class="section-text col-right">
+                <h3><span class="emph">Bachelor of Engineering</span> in Medical Information</h3>
+                <div>Sichuan University, College of Biomedical Engineering</div>
+                <div class="row">
+                    <div class="col light">Chengdu, China</div>
+                    <div class="col-right light	">Sep 2019 - Jun 2023 </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Orientation</h2>
+                <div class="section-text col-right"> <strong>AI Algorithm Researcher</strong> | Specialized in Computer Vision </div><br>
+            <div class="section-text col-right">
+                <div></div><span class="ex">
+                    Possessing an interdisciplinary background in Electronic Information and Medical Image Processing, I focus on leveraging <strong>Deep Learning</strong> to address challenging issues in medical image analysis, such as <strong>Semantic Segmentation</strong> and <strong>Image Classification</strong>, with rapidly transferable general AI capabilities.
+                </span><br>
+                <span class="ex">
+                    Proficient in <strong>Python (PyTorch framework)</strong>, I have solid full-process capabilities in paper reproduction, model development, training, tuning, testing, and academic writing, along with extensive practical experience.
+                </span><br>
+                <span class="ex">
+                    In the research on glomerulus segmentation in renal pathological sections, I proposed the innovative model "DualSeg", which achieved SOTA performance on two public datasets. Based on this achievement, <strong>a first-author SCI paper and a first-inventor software copyright</strong> have been developed (both under review).
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Papers</h2>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>DualSeg: Unified multi-scale framework with dual-stage encoder for glomerular segmentation</h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col"><strong>First Author</strong> / Under Submission / Semantic Segmantation</div>
+                    <div class="col-right light">Oct 2024 - Present</div>
+                </div>
+                <ul class="desc">
+                    <li>The key therapeutic targets of Chronic Kidney Disease is glomerular pathological changes. However, manual analysis of WSI is time-consuming, and CNN, ViT, and other mainstream automation frameworks are difficult to solve the three major challenges of local texture discriminability, spatial heterogeneity, and morphological prior integration.</li>
+                    <li>This project designs a dual-stage decoder framework <strong>DualSeg</strong>: the Wave-Swin module is used to solve the problem of local feature modeling, the VRWKV module is employed to achieve long-range dependency capture, and a lightweight decoder is integrated to accomplish multi-scale feature fusion. These three core designs each correspond to one of the three aforementioned challenges.</li>
+                    <li>To verify its performance, DualSeg was compared with 11 SOTA models on the KPIs and HuBMAP datasets, demonstrating the optimal comprehensive performance: on the KPIs test set, it achieves an average mDSC of 92.98% and obtains the lowest HD95 scores in each category; on the private/public subsets of HuBMAP, it reaches an average mDSC of 89.79% and 83.73% respectively. These results fully confirm the robustness of DualSeg and its breakthrough value in overcoming the core challenges of renal pathological segmentation.</li>
+        </div>
+
+        <div class="section-text col-right">
+            <div class="row">
+                <div class="col">
+                    <h3> Colorectal Cancer Image Classification</h3>
+                </div>
+            </div>
+            <div class="row subsection">
+                <div class="emph col">Undergraduate Graduation Project</div>
+                <div class="col-right light">Dec 2022 - Jun 2023</div>
+            </div>
+            <ul class="desc">
+                <li>In the pathological analysis of colorectal cancer, the proportion relying on manual analysis is high, with defects of inefficiency and subjectivity. The existing technologies do not fully utilize the features of multi-color spaces. In this study, three color spaces, namely RGB, HSV, and LAB*, were compared. By combining traditional features (such as 3D GLCM) with deep features (such as ResNet), a multi-color and multi-feature fusion framework was constructed. On the Kather dataset, the classification accuracy rate reached as high as 98.60%, which helps with themated analysis of the patholog autoy of colorectal cancer.</li>
+            </div>
+        </div>
+        <div class="section row">
+            <h2 class="col">Directions</h2>
+            <div class="section-text col-right"><span class="key">Machine Learning</span> <span class="key">Deep Learning</span> <span class="key">Computer
+                    Vision</span> <span class="key"><strong>Semantic Segmentation</strong></span> <span class="key"><strong>Image Classification</strong></span> <span class="key">Medical Image Analysis</span> <span class="key"></span>Computational Pathology</span></div>
+        </div>
+        
+
+        <div class="section row">
+            <h2 class="col">Projects</h2>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Kaggle Competition SenNet+HOA</h3> 
+                    </div>
+                    <div class="col-right light">Jan 2024</div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">Screened mainstream models and designed a multi-dimensional comparison scheme; the IoU improved from 0.68 to 0.73, providing key data support for the team's final model selection.</div>
+                
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Traditional Chinese Medicine Tongue Diagnosis Device Project</h3>
+                    </div>
+                    <div class="col-right light">Oct 2023</div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">Addressing issues such as complex backgrounds in clinical tongue images, a dual-model integration scheme was designed to resolve the model's missegmentation of the tongue, lips, and teeth: the accuracy rate reached 92.7% with an improvement of 5.3%, providing high-quality input for downstream tongue diagnosis feature extraction.</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; “Internet Plus”: Schizophrenia Voice Analysis Evaluation and Auxiliary Treatment Platform</h3>
+                    </div>
+                    <div class="col-right light">May 2022</div>   
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">Team Leader / Led the voice feature engineering phase, completed the development of the prototype system with an accuracy rate as high as 91%, and authored a 30,000-word business plan.</div>
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; “Challenge Cup”: Newborn Abdominal Blood Oxygen Saturation Detection System</h3>
+                    </div>
+                    <div class="col-right light">Apr 2022</div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">Team Leader / Independently responsible for the design of the core circuit board, with the tested blood oxygen error less than 3%.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Honors<br> Student Work</h2>
+                <div class="section-text col-right">
+                    <div class="row">
+                        <div class="col">
+                            <h3>&diams; Miccai2024 Kidney Pathology Image segment (KPIs) Challenge </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="emph col">Team Leader / 23rd</div>
+                        <div class="col-right light">Aug 2024</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h3>&diams; Minister and Outstanding Staff Member of the New Media Department, Graduate Student Branch of the Student Union</h3>
+                        </div>
+                        <div class="col-right light">OCT 2023 - JUL 2025</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3>&diams; Second Class Scholarship of the School</h3>
+                        </div>
+                        <div class="col-right light">Sep 2023 - Aug 2025</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3>&diams; The 3rd Sichuan Provincial Biomedical Engineering Innovation Design Competition</h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="emph col">Third Prize</div>
+                        <div class="col-right light">Jun 2023</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h3>&diams; Publicity Committee Member of the Class</h3>
+                        </div>
+                        <div class="col-right light">Sep 2022 - JUN 2023</div>
+                    </div>
+                
+                
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Courses</h2>
+            <div class="section-text col-right">
+                <span class="key"><strong>Digital Image Processing</strong></span>
+                <span class="key"><strong>Digital Signal Processing</strong></span>
+                <span class="key"><strong>Data Structure and Algorithm Analysis</strong></span>
+                <span class="key">Biomedical Image Processing</span>
+                <span class="key">Principles and Systems of Medical Imaging</span>
+                <span class="key">Medical Signal Processing</span>
+                <span class="key">Biomedical Sensors and Detection Technologies</span>
+                <span class="key">Analog Electronic Technology Fundamentals</span>
+                <span class="key">Digital Electronic Technology Fundamentals</span>
+                
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Skills</h2>
+            <div class="section-text col-right">
+                <div></div>
+                <span class="key2"><strong>Python (data cleaning and preprocessing)</strong></span>
+                <span class="key2"><strong>Git / Docker (team collaboration and version control)</strong></span>
+                <span class="key2">Shell (Linux control)</span>
+                <span class="key2">Matlab (simulation and feature extraction)</span>
+                <span class="key2">C++ (UI design)</span>
+                <span class="key2">MySQL (database construction)</span>
+                <span class="key2">AutoCAD (design drawing and modeling)</span>
+                <span class="key2">Photoshop / Lightroom (image processing)</span>
+                <span class="key2">Multisim / Lichuang CAD (circuit simulation and PCB drawing)</span><br>
+                <span class="key2"><strong>Mandarin</strong></span><span class="key2"><strong>CET6</strong></span><span class="key2"><strong>Cantonese</strong></span>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Interets</h2>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Running</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="emph col">Participated in numerous activities and competitions both inside and outside the school, and won the tenth place in both the 3-kilometer and 5-kilometer races at the school sports meeting at best.</div>
+                    <div class="col-right light">From Oct 2013</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Photography</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="emph col">Prefer film and street photography.</div>
+                    <div class="col-right light">From Oct 2022</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h3>&diams; Badminton</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="emph col">The champion of the team event in the badminton tournament of the college.</div>
+                    <div class="col-right light">From Oct 2023</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section row">
+            <h2 class="col">Personal Evaluation</h2>
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        As an AI algorithm researcher focusing on computer vision and medical image analysis, I have always taken "algorithms being implemented to solve practical problems" as my core orientation:<br>
+                        <div class="ex">Equipped with a strong sense of responsibility and closed-loop thinking, I can both tackle technical difficulties independently and collaborate efficiently with cross-disciplinary teams to advance projects. Maintaining a keen desire to explore cutting-edge technologies, I have developed a resume webpage through self-learning HTML and independently completed PCB design and hardware assembly (keyboard, host). These experiences have not only honed my engineering practice thinking but also provided cognitive support for "software-hardware collaboration" in algorithm implementation.</div>
+                        <div class="ex">Currently, I am systematically reviewing C++ to strengthen my engineering capabilities, facilitating model deployment. Meanwhile, I pay close attention to <strong>model lightweighting</strong> and the evolution of <strong>large language model</strong> technologies, and have always believed that "algorithm practicalization" is the key direction for AI implementation. I look forward to continuously creating value in AI algorithm research and development with "deep learning theory + medical image analysis experience + engineering practice capabilities."</div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
