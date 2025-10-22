@@ -10,27 +10,40 @@
 
 <body>
     <div class="page">
-            <div class="section row" style="display: flex; align-items: center; width: 100%;">
-    <!-- 名字保持原位置 -->
-    <h1 class="col"><span style="font-weight:700;">张彦</span></h1>
-    
-    <!-- 个人介绍 + 照片 整体推到最右 -->
-    <div style="display: flex; align-items: center; margin-left: auto;">
-        <div class="contact-info" style="text-align: right; margin-right: 20px;">
-            <div>26届硕士毕业生</div>
-            <div><a href="tel:+8613086929147">+86 13086929147</a></div>
-            <div><a href="mailto:bclay@qq.com">bclay@qq.com</a></div>
-            <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
+        <div class="section row" style="display: flex; align-items: center; width: 100%;">
+            <!-- 左侧：姓名 -->
+            <h1 class="col" style="font-weight:700; margin: 0;">张彦</h1>
+
+            <!-- 中间：居中显示四川大学Logo -->
+            <div style="flex-grow: 1; display: flex; justify-content: center; margin: 0 20px;">
+            <img 
+                src="../../scu.png"
+                alt="scu" 
+                style="
+                max-width: 180px;  /* 调整Logo宽度，避免过大 */
+                height: auto;     
+                border: none;     
+                "
+            >
+            </div>
+
+            <!-- 右侧：个人介绍 + 照片 -->
+            <div style="display: flex; align-items: center;">
+            <div class="contact-info" style="text-align: right; margin-right: 20px;">
+                <div>26届硕士毕业生</div>
+                <div><a href="tel:+8613086929147">+86 13086929147</a></div>
+                <div><a href="mailto:bclay@qq.com">bclay@qq.com</a></div>
+                <div><a href="mailto:zzzzy@stu.scu.edu.cn">zzzzy@stu.scu.edu.cn</a></div>
+            </div>
+            
+            <img src="../../pic.jpg"  
+                width="85" 
+                height="85" 
+                alt="张彦的个人照片"
+                style="margin: 0;"
+                >
+            </div>
         </div>
-        
-        <img src="../../pic.jpg"  
-             width="85" 
-             height="85" 
-             alt="张彦的个人照片"
-             style="margin: 0;"
-             >
-    </div>
-</div>
     
 
          <div class="section row">
@@ -201,11 +214,11 @@
                 <div style="page-break-after: always;"></div>
                 <div class="page-start"></div>
 
-            <div class="section row">
+            <!-- <div class="section row">
                 <h2 class="col">研究方向</h2>
                 <div class="section-text col-right"><span class="key">机器学习</span> <span class="key">深度学习</span> <span class="key">计算机视觉</span> <span class="key"><strong>语义分割</strong></span> <span class="key"><strong>图像分类</strong></span> <span class="key">医学图像分析<br></span> <span class="key">计算病理学</span>
                 </div>
-            </div>
+            </div> -->
 
             <div class="section row">
                 <h2 class="col">主修课程</h2>
