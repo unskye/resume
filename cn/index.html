@@ -49,19 +49,20 @@
          <div class="section row">
             <h2 class="col">教育经历</h2>
             <div class="section-text col-right">
-                <h3>电子信息（生物医学工程）<span class="emph">工学硕士</span></h3>
-                <div>四川大学 生物医学工程学院</div>
+                <h3>电子信息（生物医学工程） <span class="emph">工学硕士</span></h3>
                 <div class="row">
-                    <div class="col light">成都，中国</div>
-                    <div class="col-right light">09/2023 - 06/2026 </div>
+                    <div class="col light">GPA3.66</div>
+                </div>
+                <h3>医学信息工程 <span class="emph">工学学士</span></h3>
+                <div class="row">
+                    <div class="col light">GPA3.40</div>
                 </div>
             </div>
             <div class="section-text col-right">
-                <h3>医学信息工程 <span class="emph">工学学士</span></h3>
                 <div>四川大学 生物医学工程学院</div>
                 <div class="row">
                     <div class="col light">成都，中国</div>
-                    <div class="col-right light	">09/2019 - 06/2023 </div>
+                    <div class="col-right light	">09/2019 - 06/2026 </div>
                 </div>
             </div>
         </div>
@@ -71,14 +72,14 @@
                 <div class="section-text col-right"> <strong>AI算法研究员</strong> | 专注于计算机视觉 ​</div><br>
             <div class="section-text col-right">
                 <div></div><span class="ex">拥有电子信息与医学影像处理交叉背景，聚焦于<strong>深度学习</strong>解决医学图像分析中的挑战性问题，如<strong>语义分割、图像分类</strong>, AI通用能力可迅速移植。</span><br>
-                <span class="ex">熟练掌握<strong>Python（PyTorch框架）</strong>，具备扎实的论文复现与模型开发、训练、调优、测试及写作的全流程能力，并拥有丰富的实战经验。</span><br>
-                <span class="ex">在肾脏病理切片肾小球分割研究中提出创新模型DualSeg，在两个公开数据集上达到SOTA性能，基于此成果已发展为<strong>第一作者SCI论文</strong>和<strong>第一发明人软件著作权</strong>（均在审）。</span>
+                <span class="ex">熟练掌握<strong>Python（PyTorch框架）</strong>，具备扎实的模型开发、训练、调优、测试及写作的全流程能力，并拥有丰富的实战经验和代码复现能力。</span><br>
+                <span class="ex">在肾脏病理切片肾小球分割研究中提出创新模型DualSeg，在两个公开数据集上达到SOTA性能，基于此成果已发展为<strong>第一作者SCI论文</strong> (在审) 和<strong>第一发明人软件著作权</strong>。</span>
                 
             </div>
          </div>
 
         <div class="section row">
-            <h2 class="col">文章</h2>
+            <h2 class="col">项目</h2>
             <div class="section-text col-right">
                 <div class="row">
                     <div class="col">
@@ -86,16 +87,46 @@
                     </div>
                 </div>
                 <div class="row subsection">
-                    <div class="emph col"><strong>第一作者</strong> / 在投 / 语义分割</div>
-                    <div class="col-right light">10/2024 至今</div>
+                    <div class="emph col"><strong>第一作者</strong> / 中科院二区在投 (Under Major Revision) / 语义分割</div>
+                    <div class="col-right light">10/2024 - 08/2025</div>
                 </div>
                 <ul class="desc">
-                    <li>肾小球病理变化是慢性肾脏病治疗的关键靶点，但全切片图像手动分析耗时费力，且CNN、ViT等主流自动化框架难以有效解决局部纹理变异、空间异质性及形态学先验集成三大核心挑战。</li>
-                    <li>本项目设计双阶段解码器框架<strong>DualSeg</strong>：通过Wave-Swin模块解决局部特征建模问题，借助VRWKV模块实现远程依赖捕捉，并结合轻量解码器完成多尺度特征融合，三大核心设计分别针对前述三大挑战。</li>
-                    <li>为验证性能，DualSeg在KPIs与HuBMAP数据集上，与11个SOTA模型展开对比并展现出最优的综合表现：在KPIs测试集上，平均mDSC达92.98%，且在每个类别中均取得最低HD95分数；在HuBMAP私有/公开数据集上，平均mDSC分别达到89.79%与83.73%。该结果充分证明了DualSeg的鲁棒性，及其在攻克肾脏病理分割核心挑战上的价值。</li>
-            </div>
+                    <li>慢性肾脏病肾小球病理全切片图像手动分析效率低，CNN、ViT 等主流自动化框架难以解决局部纹理变异、空间异质性及形态学先验集成三大核心挑战。设计双阶段解码器框架<strong>DualSeg</strong>，通过集成 Wave-Swin 模块、VRWKV 模块及轻量解码器，分别针对性解决上述三大挑战，在 KPIs 与 HuBMAP 数据集上性能超越 11 个 SOTA 模型：在 KPIs 测试集平均 mDSC 达 92.98% 且各类别 HD95 分数最低；在HuBMAP 私有 / 公开测试集平均 mDSC 分别达 89.79% 与 83.73%，展现了其鲁棒性及在攻克肾脏病理分割核心挑战中的价值。</li>
+                    <li>该项目衍生的肾小球病理影像分析软件已获软件著作权（第一发明人）。</li>
+                </div>
             <!-- <div style="page-break-after: always;"></div> -->
+            
             <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3> Miccai2024肾脏病理挑战赛 (KPIs)</h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">组长</div>
+                    <div class="col-right light">07/2024 - 09/2024</div>
+                </div>
+                <ul class="desc">
+                    <li>现有肾脏病理分割公开数据集存在大规模疾病数据稀缺的问题，针对多病理状态下肾小球形态差异大的分割难点，主导设计基于注意力机制的多尺度特征融合分割算法，在涵盖 12 张 WSI 的竞赛测试集中实现 90%+ 的平均 mDSC 分割精度，获得了<strong>第23名</strong>。</li>                  
+            </div>
+
+            <div class="section-text col-right">
+                <div class="row">
+                    <div class="col">
+                        <h3>中医舌诊仪项目</h3>
+                    </div>
+                </div>
+                <div class="row subsection">
+                    <div class="emph col">模型开发</div>
+                    <div class="col-right light">10/2023 - 04/2024</div>
+                </div>
+                <ul class="desc">
+                    <li>针对临床舌像存在的背景复杂等问题，设计双模型集成方案（轻量CNN定位+Transformer矫正）解决模型对舌、唇、齿的误分割问题: 准确率达 92.7%，提升 5.3%，为下游舌诊特征提取提供高质量输入。</li>
+                    
+                </div>
+
+
+                <div class="section-text col-right">
                 <div class="row">
                     <div class="col">
                         <h3>结直肠癌图像分类</h3>
@@ -107,55 +138,27 @@
                 </div>
                 <ul class="desc">
                     <li>在结直肠癌的病理分析中，依赖人工分析的比例较高，存在效率低下、主观性的缺陷。现有技术没有充分利用多色空间的特点。在这项研究中，比较了三个色彩空间，即 RGB、HSV 和 LAB*。通过将传统特征（3D GLCM等）与深度特征（ResNet等）相结合，构建了多色多特征融合框架。在 Kather 数据集上，分类准确率高达 98.60%，有助于结直肠癌病理的自动化分析。</li>
-                </div>
-        </div>
-        <div class="section row">
-            <h2 class="col">项目</h2>
-            <div class="section-text col-right">
-                <div class="row">
-                    <div class="col">
-                        <h3>&diams; Kaggle 竞赛 SenNet+HOA</h3> 
-                    </div>
-                    <div class="col-right light">01/2024</div>
-                </div>
-                <div class="row subsection">
-                    <div class="emph col"> 筛选主流模型并设计多维度对比方案，IoU 从 0.68 提升至 0.73，为团队确定最终模型选型提供关键数据支撑。</div>
-                    
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <h3>&diams; 中医舌诊仪项目</h3>
-                    </div>
-                    <div class="col-right light">10/2023</div>
-                </div>
-                <div class="row subsection">
-                    <div class="emph col">针对临床舌像存在的背景复杂等问题，设计双模型集成方案解决模型对舌、唇、齿的误分割问题: 准确率达 92.7%，提升 5.3%，为下游舌诊特征提取提供高质量输入。</div>
                     
                 </div>
 
+                <div class="section-text col-right">
                 <div class="row">
-                        <div class="col">
-                            <h3>&diams; “互联网+”: 精神分裂症语音分析评估及辅助治疗平台</h3>
-                        </div>
-                        <div class="col-right light">05/2022</div>
+                    <div class="col">
+                        <h3>精神分裂症语音分析评估及辅助治疗平台</h3>
                     </div>
-                    <div class="row">
-                        <div class="emph col">组长 / 主导语音特征工程环节，完成原型系统开发，准确率高达 91%，并撰写 30,000 字商业计划书。</div>
-                        
                 </div>
-                    <div class="row">
-                        <div class="col">
-                            <h3>&diams; “挑战杯”: 新生儿腹部血氧饱和度检测系统</h3>
-                        </div>
-                        <div class="col-right light">04/2022</div>
-                    </div>
-                    <div class="row">
-                        <div class="emph col">组长 / 独立负责核心电路板设计，测试血氧误差小于 3%。</div>
-                        
-                    </div>
+                <div class="row subsection">
+                    <div class="emph col">“互联网+” 竞赛</div>
+                    <div class="col-right light">02/2022 - 05/2022</div>
+                </div>
+                <ul class="desc">
+                    <li>作为<strong>组长</strong>主导语音特征工程环节，完成原型系统开发，准确率高达 91%，并撰写 30,000 字商业计划书。</li>
+                    
+                </div>
+
+                
             </div>
             
-        </div>
 
 
         
@@ -164,7 +167,7 @@
                 <h2 class="col">研究方向</h2>
                 <div class="section-text col-right"><span class="key">机器学习</span> <span class="key">深度学习</span> <span class="key">计算机视觉</span> <span class="key"><strong>语义分割</strong></span> <span class="key"><strong>图像分类</strong></span> <span class="key">医学图像分析<br></span> <span class="key">计算病理学</span>
                 </div>
-            </div>
+            </div> -->
 
             <div class="section row">
                 <h2 class="col">主修课程</h2>
@@ -179,21 +182,24 @@
                     <span class="key">模拟电子技术基础实验</span>
                     <span class="key">数字电子技术基础实验</span>
                 </div>
-            </div> -->
+            </div>
             <div class="section row">
             <h2 class="col">专业技能</h2>
             <div class="section-text col-right">
                 <div></div>
-                <span class="key2"><strong>Python (数据清洗与预处理)</strong></span>
-                <span class="key2"><strong>Git/Docker (团队协作与版本管理)</strong></span>
-                <span class="key2">Shell (Linux控制)</span>
-                <span class="key2">Matlab (模拟仿真与特征提取)</span>
-                <span class="key2">C++ (UI设计)</span>
-                <span class="key2">MySQL (数据库搭建)</span>
-                <span class="key2">AutoCAD (设计绘图与建模)</span>
-                <span class="key2">Photoshop / Lightroom (图像处理)</span>
-                <span class="key2">Multisim/EasyEDA (电路仿真与PCB绘制)</span><br>
-                <strong>CET6</strong>
+                <strong>CET6</strong><br>
+                精通：
+                <span class="key2"><strong>Python </strong></span>
+                <span class="key2"><strong>Git/Docker </strong></span>
+                <span class="key2">Shell </span>
+                <span class="key2">Matlab </span><br>
+                熟练：
+                <span class="key2">AutoCAD </span>
+                <span class="key2">Photoshop / Lightroom </span>
+                <span class="key2">Multisim/EasyEDA </span><br>
+                了解：
+                <span class="key2">C++ </span>
+                <span class="key2">MySQL </span>
             </div>
             </div>
 
