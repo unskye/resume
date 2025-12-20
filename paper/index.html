@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper - DualSeg</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部工具栏（仿 arXiv） -->
+  <header class="fixed-toolbar">
+    <div class="toolbar-content">
+      <!-- 左侧信息 -->
+      <div class="doc-info">
+        <h1 class="doc-title">DualSeg: Unified Multi-Scale Framework With Dual-Stage Encoder For Glomerular Segmentation</h1>
+        <p class="doc-authors">
+          Zhan Wei, Yuan Jia, Zhang Jing, Zhang Hao
+          <span class="doc-date">2025-12-20</span>
+        </p>
+      </div>
+      
+      <!-- 右侧操作按钮 -->
+      <div class="toolbar-actions">
+        <a href="main.pdf" download class="download-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容区（PDF 查看器） -->
+  <main class="main-content">
+    <div class="pdf-container">
+      <iframe 
+        src="main.pdf" 
+        class="pdf-viewer"
+        title="PDF查看器">
+      </iframe>
+    </div>
+  </main>
+</body>
+</html>
