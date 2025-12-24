@@ -7,21 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 顶部工具栏（仿 arXiv） -->
   <header class="fixed-toolbar">
     <div class="toolbar-content">
-      <!-- 左侧信息 -->
       <div class="doc-info">
-        <h1 class="doc-title">DualSeg: Unified Multi-Scale Framework With Dual-Stage Encoder For Glomerular Segmentation</h1>
+        <h1 class="doc-title" id="doc-title">DualSeg: Unified Multi-Scale Framework With Dual-Stage Encoder For Glomerular Segmentation</h1>
         <p class="doc-authors">
           Yan Zhang, Wei Yuan, Jiayu Zhang, Jing Zhang, Ling He
           <span class="doc-date">2025-12-24</span>
         </p>
       </div>
       
-      <!-- 右侧操作按钮 -->
       <div class="toolbar-actions">
-        <a href="main.pdf" download class="download-btn">
+        <a href="main.pdf" download id="download-btn" class="download-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
@@ -33,15 +30,54 @@
     </div>
   </header>
 
-  <!-- 主内容区（PDF 查看器） -->
   <main class="main-content">
     <div class="pdf-container">
       <iframe 
+        id="pdf-frame"
         src="main.pdf" 
         class="pdf-viewer"
         title="PDF查看器">
       </iframe>
     </div>
   </main>
+
+  <script>
+    // 1. 配置文档列表
+    // key: URL参数值
+    // file: 对应的文件名 (请确保这些文件已上传)
+    // title: 顶部显示的标题
+    const documents = {
+      'main': {
+        file: 'main.pdf',
+        title: 'DualSeg: Unified Multi-Scale Framework With Dual-Stage Encoder For Glomerular Segmentation'
+      },
+      'review': {
+        file: 'review.pdf', // 你的第一个Word转成的PDF文件名
+        title: 'review意见' 
+      },
+      'rebuttal': {
+        file: 'rebuttal.pdf', // 你的第二个Word转成的PDF文件名
+        title: 'rebuttal回复'
+      }
+    };
+
+    // 2. 获取 URL 参数 ?p=xxx
+    const urlParams = new URLSearchParams(window.location.search);
+    const pageKey = urlParams.get('p') || 'main'; // 如果没有参数，默认显示 main
+
+    // 3. 获取对应的文档配置，如果参数错误则回退到 main
+    const currentDoc = documents[pageKey] || documents['main'];
+
+    // 4. 更新页面内容
+    // 更新 iframe 链接
+    document.getElementById('pdf-frame').src = currentDoc.file;
+    // 更新下载按钮链接
+    document.getElementById('download-btn').href = currentDoc.file;
+    // 更新标题文字
+    document.getElementById('doc-title').innerText = currentDoc.title;
+    // 更新浏览器标签页标题
+    document.title = "Paper - " + (pageKey === 'main' ? 'DualSeg' : pageKey);
+
+  </script>
 </body>
 </html>
